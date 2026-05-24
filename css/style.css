@@ -845,4 +845,38 @@ html
     }
 }
 
+@media (max-width: 947px)
+{
+    .about .about-content .left,
+    .about .about-content .right
+    {
+        width: 100%;
+    }
 
+    .about .about-content
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card
+    {
+        max-width: 100%;
+    }
+
+    .certificate-card
+    {
+        width: 100%;
+    }
+
+    .skills-tags
+    {
+        gap: 12px;
+    }
+
+    .skills-tags span
+    {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
