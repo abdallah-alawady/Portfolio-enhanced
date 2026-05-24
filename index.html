@@ -1,418 +1,446 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Yasser | AI & NLP Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yousuf Eslam | Mechatronics Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <style>
+    /* ─── Project Cards: Compact & Clean ─── */
+    .teams-list .project-card {
+      padding: 22px 20px 20px;
+    }
+    .teams-list .project-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .teams-list .name {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .teams-list p {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* ─── Experience / Timeline Section ─── */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px 0 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: currentColor;
+      opacity: 0.18;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--theme-color, #3498db);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      z-index: 1;
+      box-shadow: 0 0 0 5px rgba(52,152,219,0.12);
+    }
+    .timeline-body {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      flex: 1;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      border-left: 3px solid var(--theme-color, #3498db);
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+    .timeline-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #222;
+      margin: 0;
+    }
+    .timeline-date {
+      font-size: 11.5px;
+      color: var(--theme-color, #3498db);
+      font-weight: 600;
+      white-space: nowrap;
+      background: rgba(52,152,219,0.09);
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+    .timeline-org {
+      font-size: 12.5px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .timeline-body ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+    .timeline-body ul li {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 4px;
+    }
+    .timeline-body ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* dark-bg variant so timeline cards still look clean */
+    .section.experience {
+      background: #f6f7fb;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="max-width">
-            <div class="logo">
-                <a href="#">ENG.<span>Yousuf</span></a>
-            </div>
-
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <!-- <li><a href="#services">Services</a></li> -->
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="max-width">
+      <div class="logo">
+        <a href="#">ENG.<span>Yousuf</span></a>
+      </div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
+  </div>
 
-
-    <!-- Home Section -->
-    <div class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Yousuf Eslam</div>
-                <div class="text-3">I am a <span>Mechatronics Engineer</span></div>
-                <a href="#contact">Hire Me</a>
-            </div>
-        </div>
+  <!-- Home Section -->
+  <div class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1">Hello, my name is</div>
+        <div class="text-2">Yousuf Eslam</div>
+        <div class="text-3">I am a <span>Mechatronics Engineer</span></div>
+        <a href="#contact">Hire Me</a>
+      </div>
     </div>
+  </div>
 
+  <!-- About Section -->
+  <div class="section about" id="about">
+    <div class="max-width">
+      <h2 class="title">About Me</h2>
+      <div class="about-content">
+        <div class="column left">
+          <img src="/images/1758124961168.png" alt="Yousuf Eslam">
+        </div>
+        <div class="column right">
+          <div class="text">
+            I'm Yousuf Eslam and I'm a <span>Mechatronics and Robotics Engineering</span>
+          </div>
+          <p>
+            Mechatronics and Robotics Engineering student at Ain Shams University
+            with a strong passion for robotics, aerodynamics, and intelligent engineering systems.
+            Experienced in Formula Student competitions as an Aerodynamics Engineer,
+            working on CFD simulations, aerodynamic bodywork, and performance optimization
+            using Fusion 360 and Ansys Fluent.
+            Passionate about creating engineering content and simplifying complex STEM topics
+            through technical videos and project documentaries on YouTube.
+            Worked on multiple engineering and robotics projects including an Air Powered Car,
+            Hydraulic Clutch System, RC Car, and an autonomous Omni-Wheel Mobile Manipulator
+            integrating Machine Learning and ROS 2 technologies.
+          </p>
+          <a href="Yousuf Eslam Mohammed CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- About Section -->
-    <div class="section about" id="about">
-        <div class="max-width">
-            <h2 class="title">About Me</h2>
+  <!-- Skills Section -->
+  <div class="section skills" id="skills">
+    <div class="max-width">
+      <h2 class="title">My Skills</h2>
+      <div class="skills-content">
+        <div class="skills-tags">
+          <span>Inventor</span>
+          <span>Fusion 360</span>
+          <span>SolidWorks</span>
+          <span>SpaceClaim</span>
+          <span>MATLAB</span>
+          <span>Ansys</span>
+          <span>CFD</span>
+          <span>Tableau</span>
+          <span>Obsidian</span>
+          <span>Java</span>
+          <span>C++</span>
+          <span>Python</span>
+          <span>Arduino</span>
+          <span>Blender 3D</span>
+          <span>DaVinci Resolve</span>
+          <span>OBS</span>
+          <span>Photoshop</span>
+          <span>Data Analysis</span>
+          <span>Stress Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <div class="about-content">
+  <!-- Projects Section -->
+  <div class="section teams" id="projects">
+    <h2 class="title">My Projects</h2>
+    <div class="teams-content">
+      <div class="slider-container swiper">
+        <div class="slider-wrapper">
+          <ul class="teams-list swiper-wrapper">
 
-                <div class="column left">
-                    <img src="/images/1758124961168.png" alt="Ahmed Yasser">
-                </div>
-
-                <div class="column right">
-                    <div class="text">
-                        I'm Yousuf Eslam and I'm a <span>Mechatronics and Robotics Engineering</span>
-                    </div>
-
-                    <p>
-                        <p>
-                Mechatronics and Robotics Engineering student at Ain Shams University
-                with a strong passion for robotics, aerodynamics, and intelligent engineering systems.
-
-                Experienced in Formula Student competitions as an Aerodynamics Engineer,
-                working on CFD simulations, aerodynamic bodywork, and performance optimization
-                using Fusion 360 and Ansys Fluent.
-
-                Passionate about creating engineering content and simplifying complex STEM topics
-                through technical videos and project documentaries on YouTube.
-
-                Worked on multiple engineering and robotics projects including an Air Powered Car,
-                Hydraulic Clutch System, RC Car, and an autonomous Omni-Wheel Mobile Manipulator
-                integrating Machine Learning and ROS 2 technologies.
+            <li class="teams swiper-slide">
+              <a href="#" class="project-card">
+                <i class="fas fa-wind project-icon"></i>
+                <h3 class="name">Air Powered Car</h3>
+                <p>
+                  Led a team of 8 in designing a lightweight compressed-air car powered by a thrust nozzle.
+                  Operated at 10 bars with a 3-liter reservoir, designed to travel 10 meters with
+                  braking and remote-control capabilities.
                 </p>
-                    </p>
+              </a>
+            </li>
 
-                    <a href="Yousuf Eslam Mohammed CV.pdf" download>
-                         Download CV
-                    </a>
-                </div>
-            </div>
+            <li class="teams swiper-slide">
+              <a href="#" class="project-card">
+                <i class="fas fa-droplet project-icon"></i>
+                <h3 class="name">Hydraulic Clutch System</h3>
+                <p>
+                  Applied fluid mechanics principles to build a functional fluid clutch from scratch.
+                  A DC motor drove a primary impeller transmitting rotational motion through water
+                  to a secondary impeller connected to a pulley.
+                </p>
+              </a>
+            </li>
+
+            <li class="teams swiper-slide">
+              <a href="#" class="project-card">
+                <i class="fas fa-gamepad project-icon"></i>
+                <h3 class="name">RC Car</h3>
+                <p>
+                  Multi-modal control system featuring hand-gesture recognition,
+                  Bluetooth button operation, and automated line-tracking capability.
+                </p>
+              </a>
+            </li>
+
+            <li class="teams swiper-slide">
+              <a href="#" class="project-card">
+                <i class="fas fa-robot project-icon"></i>
+                <h3 class="name">Omni-Wheel Mobile Manipulator</h3>
+                <p>
+                  Designing an autonomous mobile robot arm integrating Machine Learning,
+                  Model Based Design, and ROS 2 for intelligent motion planning.
+                </p>
+              </a>
+            </li>
+
+          </ul>
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
     </div>
+  </div>
 
-
-    <!-- Services Section
-    <div class="section services" id="services">
-        <div class="max-width">
-            <h2 class="title">My Services</h2>
-
-            <div class="services-content">
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-brain"></i>
-                        <div class="text">Natural Language Processing</div>
-                        <p>
-                            Building intelligent NLP systems using Transformers,
-                            Hugging Face, and modern AI technologies.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-robot"></i>
-                        <div class="text">Generative AI Applications</div>
-                        <p>
-                            Developing RAG pipelines, AI assistants,
-                            summarization systems, and LLM-powered applications.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-eye"></i>
-                        <div class="text">Computer Vision</div>
-                        <p>
-                            Creating real-time vision systems and assistive AI
-                            applications using OpenCV and deep learning.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
- -->
-
-    <!-- Skills Section -->
-<div class="section skills" id="skills">
+  <!-- Experience Section -->
+  <div class="section experience" id="experience">
     <div class="max-width">
-        <h2 class="title">My Skills</h2>
+      <h2 class="title">Experience</h2>
+      <div class="timeline">
 
-        <div class="skills-content">
-            <div class="skills-tags">
-
-                <span>Inventor</span>
-                <span>Fusion 360</span>
-                <span>SolidWorks</span>
-                <span>SpaceClaim</span>
-
-                <span>MATLAB</span>
-                <span>Ansys</span>
-                <span>CFD</span>
-                <span>Tableau</span>
-
-                <span>Obsidian</span>
-                <span>Java</span>
-                <span>C++</span>
-                <span>Python</span>
-
-                <span>Arduino</span>
-                <span>Blender 3D</span>
-                <span>DaVinci Resolve</span>
-                <span>OBS</span>
-
-                <span>Photoshop</span>
-                <span>Data Analysis</span>
-                <span>Stress Analysis</span>
-
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-plane-up"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Aerodynamics Engineer</h3>
+              <span class="timeline-date">Nov 2024 – Present</span>
             </div>
+            <div class="timeline-org">ASU Racing Team — Formula Student</div>
+            <ul>
+              <li>Designed and validated vehicle bodywork using Fusion 360 and Ansys Fluent, referencing biomimicry principles (white shark & swift bird).</li>
+              <li>Designed and validated aerodynamic wings for improved traction.</li>
+              <li>Designed sheet metal fixations and verified with stress analysis.</li>
+              <li>Tutored "Intro to Aerodynamics" and "Intro to VHD" in the recruitment academy.</li>
+            </ul>
+          </div>
         </div>
-    </div>
-</div>
 
-    <!-- Projects Section -->
-    <div class="section teams" id="projects">
-
-        <h2 class="title">My Projects</h2>
-
-        <div class="teams-content">
-
-            <div class="slider-container swiper">
-                <div class="slider-wrapper">
-
-                    <ul class="teams-list swiper-wrapper">
-
-                        <li class="teams swiper-slide">
-    <a href="#" target="" class="project-card">
-        <i class="fas fa-notes-medical project-icon"></i>
-
-        <h3 class="name">Air Powered Car</h3>
-
-        <p>
-             Led a team of 8 in designing a lightweight, functional compressed-air car powered by a thrust nozzle. The system
-            operated at 10 bars with a 3-liter air reservoir and was designed to travel 10 meters. The vehicle also incorporated
-            braking and remote-control capabilities.
-        </p>
-
-        <!-- <span class="project-btn">
-            View Project <i class="fas fa-arrow-up-right-from-square"></i>
-        </span> -->
-    </a>
-</li>
-
-
-<li class="teams swiper-slide">
-    <a href="https://github.com/ahmed-yasser-taha/NLP" target="_blank" class="project-card">
-        <i class="fas fa-comments project-icon"></i>
-
-        <h3 class="name">Hydraulic Clutch System</h3>
-
-        <p>
-            applied fundamental fluid mechanics principles to design and build a functional fluid clutch system from scratch. A
-basic DC motor drove a primary impeller, which transmitted rotational motion through a liquid medium (water, in our
-case) to a secondary impeller connected to a pulley.
-        </p>
-
-        <!-- <span class="project-btn">
-            View Project <i class="fas fa-arrow-up-right-from-square"></i>
-        </span> -->
-    </a>
-</li>
-
-
-<li class="teams swiper-slide">
-    <a href="https://github.com/ahmed-yasser-taha/Ai-Meeting-assistant.git" target="_blank" class="project-card">
-        <i class="fas fa-file-lines project-icon"></i>
-
-        <h3 class="name">RC Car</h3>
-
-        <p>
-             Implemented features such as hand-gesture control, Bluetooth button operation, and line-tracking capability
-        </p>
-
-        <!-- <span class="project-btn">
-            View Project <i class="fas fa-arrow-up-right-from-square"></i>
-        </span> -->
-    </a>
-</li>
-
-
-<li class="teams swiper-slide">
-    <a href="https://github.com/IsmailMohamed010/eye-tracker.git" target="_blank" class="project-card">
-        <i class="fas fa-eye project-icon"></i>
-
-        <h3 class="name">Omni-Wheel Mobile Maniplator</h3>
-
-        <p>
-            Designing an autonomous mobile robot arm, integrating Machine Learning, Model Based Design and Ros 2.
-        </p>
-
-        <!-- <span class="project-btn">
-            View Project <i class="fas fa-arrow-up-right-from-square"></i>
-        </span> -->
-    </a>
-</li>
-
-                    </ul>
-
-                    <div class="swiper-pagination"></div>
-
-                </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fab fa-youtube"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-title">YouTube Creator</h3>
+              <span class="timeline-date">Dec 2024 – Present</span>
             </div>
+            <div class="timeline-org">@YousufEslam</div>
+            <ul>
+              <li>Grew channel to 8K views and 600+ watch-time hours with 30+ videos on STEM subjects and project documentaries.</li>
+              <li>Covered Fluid Mechanics, Thermodynamics, Material Science, Heat Transfer, and Vehicle Dynamics.</li>
+            </ul>
+          </div>
         </div>
-    </div>
-    
-<div class="section certificates" id="certificates">
 
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-solar-panel"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Renewable Energy Intern</h3>
+              <span class="timeline-date">Jul 2025 – Aug 2025</span>
+            </div>
+            <div class="timeline-org">NREA — New and Renewable Energy Authority, Cairo</div>
+            <ul>
+              <li>Explored solar and wind energy equipment and infrastructure at the Authority's headquarters.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-atom"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Nuclear Energy Intern</h3>
+              <span class="timeline-date">Aug 2025</span>
+            </div>
+            <div class="timeline-org">EAEA — Egyptian Atomic Energy Authority, El Sharqia</div>
+            <ul>
+              <li>Visited the second Egyptian nuclear power plant.</li>
+              <li>Explored mechatronics applications: Radiation Sensor Devices, PCB Fabrication, and Nuclear Plant Control Room operations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fas fa-chart-bar"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3 class="timeline-title">Data Analytics & Visualization</h3>
+              <span class="timeline-date">Nov 2023</span>
+            </div>
+            <div class="timeline-org">University of Illinois Urbana-Champaign (Online)</div>
+            <ul>
+              <li>Applied data analysis principles and visualized datasets using Tableau.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section contact" id="contact">
     <div class="max-width">
-
-        <h2 class="title">Certificates</h2><div class="certificates-content">
-
-    <a href="https://drive.google.com/file/d/13QRTRJTeR-Fu-5uvUoWwDsk7EHLCzMnX/view?usp=sharing" target="_blank" class="certificate-card">
-        <i class="fas fa-award"></i>
-        <h3>NLP Training</h3>
-        <p>National Telecommunication Institute (NTI)</p>
-    </a>
-
-    <a href="https://drive.google.com/file/d/1dK6vmn-8XTe6MMPafVrF4DeDSavNpgKY/view?usp=drive_link" target="_blank" class="certificate-card">
-        <i class="fas fa-eye"></i>
-        <h3>Computer Vision Training</h3>
-        <p>NAID Academy</p>
-    </a>
-
-    <a href="https://drive.google.com/file/d/1RdvnZoyJuCnkfXzSmhJyQEcJ6LyOeHfW/view?usp=drive_link" target="_blank" class="certificate-card">
-        <i class="fas fa-brain"></i>
-        <h3>Fundamentals of Deep Learning</h3>
-        <p>NVIDIA</p>
-    </a>
-
-    <a href="https://www.coursera.org/account/accomplishments/specialization/P9VGMSN44H05" target="_blank" class="certificate-card">
-        <i class="fas fa-robot"></i>
-        <h3>Machine Learning Specialization</h3>
-        <p>Coursera</p>
-    </a>
-
-    <a href="https://www.coursera.org/account/accomplishments/records/YRL4HRQ39F61" target="_blank" class="certificate-card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Supervised Machine Learning</h3>
-        <p>Machine Learning Certification</p>
-    </a>
-
-    <a href="https://www.coursera.org/account/accomplishments/records/SE7UBE6WAQPV" target="_blank" class="certificate-card">
-        <i class="fas fa-microchip"></i>
-        <h3>Advanced Learning Algorithms</h3>
-        <p>AI & Deep Learning</p>
-    </a>
-
-    <a href="https://coursera.org/share/547411f4b95d9a28cb280cc8084c6f54" target="_blank" class="certificate-card">
-        <i class="fas fa-diagram-project"></i>
-        <h3>Unsupervised Learning & RL</h3>
-        <p>Recommenders & Reinforcement Learning</p>
-    </a>
-
-</div>
-    <!-- Contact Section -->
-    <div class="section contact" id="contact">
-        <div class="max-width">
-
-            <h2 class="title">Contact Me</h2>
-
-            <div class="contact-content">
-
-                <div class="column left">
-
-                    <div class="text">Get In Touch</div>
-
-                    <p>
-                        Interested in AI, NLP, Generative AI, or Computer Vision projects?
-                        Feel free to reach out for collaboration, freelance opportunities,
-                        or technical discussions.
-                    </p>
-
-                    <div class="icons">
-
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Ahmed Yasser Taha</div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">El Obour, Egypt</div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">ahmed.yasser.taha.sayed@gmail.com</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="column right">
-                    <div class="text">Message Me</div>
-
-                    <form action="#">
-
-                        <div class="fields">
-
-                            <div class="field name">
-                                <input type="text" placeholder="Name">
-                            </div>
-
-                            <div class="field email">
-                                <input type="email" placeholder="Email">
-                            </div>
-
-                            <div class="field">
-                                <input type="text" placeholder="Subject">
-                            </div>
-
-                            <div class="field">
-                                <textarea cols="30" rows="10" placeholder="Describe Project..."></textarea>
-                            </div>
-
-                            <div class="button">
-                                <button type="submit">Send Message</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
+      <h2 class="title">Contact Me</h2>
+      <div class="contact-content">
+        <div class="column left">
+          <div class="text">Get In Touch</div>
+          <p>
+            Interested in engineering collaborations, robotics projects, aerodynamics work,
+            or content creation? Feel free to reach out.
+          </p>
+          <div class="icons">
+            <div class="row">
+              <i class="fas fa-user"></i>
+              <div class="info">
+                <div class="head">Name</div>
+                <div class="sub-title">Yousuf Eslam</div>
+              </div>
             </div>
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <div class="head">Address</div>
+                <div class="sub-title">Cairo, Egypt</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">eng.yousufeslam@email.com</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-phone"></i>
+              <div class="info">
+                <div class="head">Phone</div>
+                <div class="sub-title">+20 1009772813</div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="column right">
+          <div class="text">Message Me</div>
+          <form action="#">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" placeholder="Name">
+              </div>
+              <div class="field email">
+                <input type="email" placeholder="Email">
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Subject">
+              </div>
+              <div class="field">
+                <textarea cols="30" rows="10" placeholder="Describe your project..."></textarea>
+              </div>
+              <div class="button">
+                <button type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Footer -->
+  <div class="footer section">
+    <span>
+      Created By <a href="#">Yousuf Eslam</a>
+      |
+      <span class="far fa-copyright"></span>
+      2026 All rights reserved
+    </span>
+  </div>
 
-    <!-- Footer -->
-    <div class="footer section">
-        <span>
-            Created By <a href="#">Ahmed Yasser Taha</a>
-            |
-            <span class="far fa-copyright"></span>
-            2026 All rights reserved
-        </span>
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <script src="/js/script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>
-
-
